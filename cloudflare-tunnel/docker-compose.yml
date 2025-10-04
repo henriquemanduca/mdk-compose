@@ -1,0 +1,13 @@
+cloudflaretunnel:
+    image: cloudflare/cloudflared:2025.7.0
+    container_name: cloudflaretunnel
+    restart: unless-stopped
+    environment:
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN}
+    command: tunnel --no-autoupdate run
+    networks:
+      - server-net
+
+networks:
+  server-net:
+    external: true
