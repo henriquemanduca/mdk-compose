@@ -1,5 +1,5 @@
 networks:
-  server-network:
+  server-net:
     external: true
 
 volumes:
@@ -25,7 +25,7 @@ services:
     ports:
       - 3000:1337
     networks:
-      - server-network
+      - server-net
     environment:
       - BASE_URL=https://my-url.com/
       - DATABASE_URL=postgresql://user:passwork@postgres/planka
