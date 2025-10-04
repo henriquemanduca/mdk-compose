@@ -1,11 +1,12 @@
 networks:
-  server-net:
-    external: true
+  samba-net:
+    driver: bridge
 
 volumes:
   redisinsight_data:
 
-samba:
+services:
+  samba:
     image: dperson/samba
     container_name: samba
     restart: unless-stopped
@@ -24,4 +25,4 @@ samba:
       -s "shared;/shared;yes;no;no;henrique"
       -p
     networks:
-      - server-net
+      - samba-net
