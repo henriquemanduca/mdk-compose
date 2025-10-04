@@ -31,3 +31,10 @@ Este repositório contém uma coleção de configurações Docker Compose, cada 
 *   **Tecnologias**: RedisInsight.
 *   **Porta Exposta**: `5540`.
 *   **Dependências**: Requer um serviço Redis em execução para se conectar.
+
+### MySQL
+
+*   **Descrição**: Um sistema de gerenciamento de banco de dados relacional de código aberto amplamente utilizado. É conhecido por sua velocidade, confiabilidade e facilidade de uso.
+*   **Tecnologias**: MySQL.
+*   **Porta Exposta**: `3306`.
+*   **Variáveis de Ambiente**: `MYSQL_ROOT_PASSWORD`, `MYSQL_DATABASE`.
