@@ -1,6 +1,12 @@
 networks:
-  vps-network: # Manual creation if not exists
+  server-network:
     external: true
+
+volumes:
+  favicons:
+  user-avatars:
+  background-images:
+  attachments:
 
 services:
   planka:
@@ -19,7 +25,7 @@ services:
     ports:
       - 3000:1337
     networks:
-      - vps-network
+      - server-network
     environment:
       - BASE_URL=https://my-url.com/
       - DATABASE_URL=postgresql://user:passwork@postgres/planka
@@ -116,8 +122,3 @@ services:
       # Use a proxy you control for privacy, or leave commented out or empty to disable.
       # - GRAVATAR_BASE_URL=https://www.gravatar.com/avatar/
 
-volumes:
-  favicons:
-  user-avatars:
-  background-images:
-  attachments:

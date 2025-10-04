@@ -1,0 +1,23 @@
+networks:
+  databases-net:
+
+volumes:
+  mysql_data:
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    restart: no
+    environment:
+      MYSQL_ROOT_PASSWORD: manduca
+      MYSQL_DATABASE: app_demo
+    # You can also create a dedicated user and password for the new database.
+    # MYSQL_USER: db_user
+    # MYSQL_PASSWORD: user_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - databases-net
