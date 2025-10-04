@@ -1,4 +1,5 @@
-cloudflaretunnel:
+services:
+  cloudflaretunnel:
     image: cloudflare/cloudflared:2025.7.0
     container_name: cloudflaretunnel
     restart: unless-stopped
