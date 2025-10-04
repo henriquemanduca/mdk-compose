@@ -38,3 +38,10 @@ Este repositório contém uma coleção de configurações Docker Compose, cada 
 *   **Tecnologias**: MySQL.
 *   **Porta Exposta**: `3306`.
 *   **Variáveis de Ambiente**: `MYSQL_ROOT_PASSWORD`, `MYSQL_DATABASE`.
+
+### Samba
+
+*   **Descrição**: Samba é uma implementação de software livre do protocolo de rede SMB/CIFS, que permite o compartilhamento de arquivos e impressoras entre sistemas operacionais.
+*   **Tecnologias**: Samba.
+*   **Portas Expostas**: `137/udp`, `138/udp`, `139/tcp`, `445/tcp`.
+*   **Configuração**: Compartilha o diretório `/home/henrique/shared` do host como `/shared` no contêiner, com usuário `henrique` e senha `manduca`.
