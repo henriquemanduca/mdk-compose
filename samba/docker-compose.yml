@@ -1,6 +1,3 @@
-volumes:
-  redisinsight_data:
-
 services:
   samba:
     image: dperson/samba
