@@ -1,0 +1,20 @@
+volumes:
+  yacht:
+
+networks:
+  server-net:
+    external: true
+
+services:
+  yacht:
+    image: selfhostedpro/yacht
+    container_name: yacht
+    restart: unless-stopped
+    ports:
+      - "8001:8000"
+    volumes:
+      - yacht:/config
+      - /var/run/docker.sock:/var/run/docker.sock
+
+
+
