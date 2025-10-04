@@ -1,5 +1,6 @@
 networks:
   databases-net:
+    external: true
 
 volumes:
   redisinsight_data:
