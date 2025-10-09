@@ -1,5 +1,5 @@
 networks:
-  databases-net:
+  server-net:
     external: true
 
 volumes:
@@ -15,6 +15,6 @@ services:
     volumes:
       - redisinsight_data:/data
     networks:
-      - databases-net
+      - server-net
     depends_on:
       - redis
