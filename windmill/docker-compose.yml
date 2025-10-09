@@ -6,6 +6,7 @@ x-logging: &default-logging
     compress: "true"
 
 networks:
+  windmill:
   server-net:
     external: true
 
