@@ -1,0 +1,18 @@
+services:
+  memos:
+    image: neosmemo/memos:stable
+    container_name: memos
+    ports:
+      - "8030:5230"
+    volumes:
+      - /home/henrique/shared/volumes/memos:/var/opt/memos
+    environment:
+      - MEMOS_MODE=prod
+      - MEMOS_PORT=5230
+    restart: unless-stopped
+    networks:
+      - server-net
+
+networks:
+  server-net:
+    external: true
