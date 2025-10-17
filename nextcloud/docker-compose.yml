@@ -7,8 +7,8 @@ services:
       - PGID=1000
       - TZ=America/Sao_Paulo
     volumes:
-      - /home/henrique/externo/nextcloud/config:/config
-      - /home/henrique/externo/nextcloud:/data
+      - /home/henrique/nextcloud/config:/config
+      - /home/henrique/nextcloud:/data
     ports:
       - 443:443
     restart: unless-stopped
