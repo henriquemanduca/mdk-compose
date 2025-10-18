@@ -17,7 +17,7 @@ services:
     volumes:
       - bookstack_data:/config
     ports:
-      - 6875:80
+      - 8020:80
     restart: unless-stopped
     networks:
       - server-net
