@@ -4,11 +4,11 @@ services:
     container_name: mysql
     restart: no
     environment:
-      MYSQL_ROOT_PASSWORD: manduca
-      MYSQL_DATABASE: app_demo
-    # You can also create a dedicated user and password for the new database.
-    # MYSQL_USER: db_user
-    # MYSQL_PASSWORD: user_password
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB}
+      # You can also create a dedicated user and password for the new database.
+      # MYSQL_USER: db_user
+      # MYSQL_PASSWORD: user_password
     ports:
       - "3306:3306"
     volumes:
