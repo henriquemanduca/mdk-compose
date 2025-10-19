@@ -32,6 +32,8 @@ services:
       disable: false
 
   immich-machine-learning:
+    deploy:
+      replicas: 0
     container_name: immich_machine_learning
     # For hardware acceleration, add one of -[armnn, cuda, rocm, openvino, rknn] to the image tag.
     # Example tag: ${IMMICH_VERSION:-release}-cuda
