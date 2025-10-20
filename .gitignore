@@ -2,3 +2,5 @@
 plex/plex
 qbittorrent/qbittorrent
 gitea
+*/library
+*/postgres
