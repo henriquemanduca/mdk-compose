@@ -4,3 +4,7 @@ qbittorrent/qbittorrent
 gitea
 */library
 */postgres
+*/audiobooks
+*/podcasts
+*/config
+*/metadata
