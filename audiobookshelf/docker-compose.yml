@@ -1,5 +1,6 @@
 services:
   audiobookshelf:
+    container_name: audiobookshelf
     image: ghcr.io/advplyr/audiobookshelf:latest
     ports:
       - 8035:80
@@ -10,3 +11,9 @@ services:
       - ./metadata:/metadata
     environment:
       - TZ=America/Sao_Paulo
+    networks:
+      - server-net
+
+networks:
+  server-net:
+    external: true
