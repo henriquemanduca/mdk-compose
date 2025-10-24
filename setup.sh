@@ -2,7 +2,7 @@
 
 # Function to configure Git
 configure_git() {
-    echo "*** Git Configuration ***"
+    echo "Git Configuration"
 
     sudo apt-get install git
 
@@ -41,7 +41,7 @@ configure_git() {
 
 # Function to install lazydocker
 install_lazydocker() {
-    echo "*** Installing lazydocker ***"
+    echo "Installing lazydocker"
     echo "This will run the installation script from GitHub"
     read -p "Do you want to continue? (y/n): " confirm
 
@@ -57,7 +57,7 @@ install_lazydocker() {
 
 # Function to install lazygit
 install_lazygit() {
-    echo "*** Installing lazygit ***"
+    echo "Installing lazygit"
     echo "This will run the installation with apt"
     read -p "Do you want to continue? (y/n): " confirm
 
@@ -74,7 +74,7 @@ install_lazygit() {
 
 # Function to create .bash_aliases
 create_bash_aliases() {
-    echo "*** Create .bash_aliases ***"
+    echo "Create .bash_aliases"
     read -p "Do you want to create the .bash_aliases file? (y/n): " confirm
     if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
         echo "Creating .bash_aliases file..."
@@ -136,7 +136,7 @@ EOF
 
 # Function to install zoxide
 install_zoxide() {
-    echo "*** Installing zoxide ***"
+    echo "Installing zoxide"
     echo "This will run the installation script from GitHub"
     read -p "Do you want to continue? (y/n): " confirm
 
