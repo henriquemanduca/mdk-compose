@@ -31,26 +31,42 @@ install_lazydocker() {
     echo ""
 }
 
+# Function to install lazygit
+install_lazygit() {
+    echo "*** Installing lazygit ***"
+    echo "This will run the installation with apt"
+    read -p "Do you want to continue? (y/n): " confirm
+    
+    if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
+        echo "Installing lazygit..."
+	sudo apt install lazygit
+        echo "lazygit installation complete!"
+    else
+        echo "lazygit installation canceled."
+    fi
+    echo ""
+}
+
+
 # Main menu
 while true; do
     echo "Fresh Linux Setup Configuration"
     echo "1. Configure Git"
     echo "2. Install lazydocker"
-    echo "3. Option 3 (Placeholder)"
+    echo "3. Install lazygit"
     echo "4. Exit"
     read -p "Enter your choice (1-4): " choice
     
     case $choice in
         1)
-            configure_git
-            ;;
+		configure_git
+		;;
         2)
-            install_lazydocker
-            ;;
+            	install_lazydocker
+            	;;
         3)
-            echo "Option 3 selected"
-            # Add your configuration here
-            ;;
+		install_lazygit
+            	;;
         4)
             echo "Exiting..."
             exit 0
