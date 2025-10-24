@@ -158,8 +158,8 @@ while true; do
 
     case $choice in
         1)
-		    configure_git
-		    ;;
+		    create_bash_aliases
+            ;;
         2)
             install_lazydocker
             ;;
@@ -167,11 +167,12 @@ while true; do
 		    install_lazygit
             ;;
         4)
-		    create_bash_aliases
+            install_zoxide
             ;;
         5)
-		    install_zoxide
-            ;;
+            configure_git
+		    ;;
+
         6)
             echo "Exiting..."
             exit 0
