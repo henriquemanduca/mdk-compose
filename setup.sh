@@ -16,7 +16,14 @@ configure_git() {
     echo "Name: $git_name"
     echo "Email: $git_email"
 
-    git config pull.rebase true
+    read -p "Do you want to set 'git config --global pull.rebase true'? (ensures that your local changes are applied on top of the remote changes when you pull) (y/n): " confirm_rebase
+
+    if [[ $confirm_rebase == [yY] || $confirm_rebase == [yY][eE][sS] ]]; then
+        git config --global pull.rebase true
+        echo "Git pull.rebase set to true."
+    else
+        echo "Git pull.rebase not configured."
+    fi
 
     git config --global alias.ci commit
     git config --global alias.st status
@@ -148,11 +155,11 @@ install_zoxide() {
 # Main menu
 while true; do
     echo "Fresh Linux Setup Configuration"
-    echo "1. Configure Git"
+    echo "1. Create .bash_aliases"
     echo "2. Install lazydocker"
     echo "3. Install lazygit"
-    echo "4. Create .bash_aliases"
-    echo "5. Install zoxide"
+    echo "4. Install zoxide"
+    echo "5. Configure Git"
     echo "6. Exit"
     read -p "Enter your choice (1-6): " choice
 
