@@ -95,12 +95,13 @@ alias ldk='lazydocker'
 # Commands ---------------------------------------------------------------------
 
 # For Debian
-# alias l='ls'
-# alias ll='ls -lh'
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
 
-alias la='ls -lah'
 alias lr='ls -R'
 alias lh='ls -d .*'
+
 alias rmf='rm -rf' # just delete it
 alias ht='history'
 
