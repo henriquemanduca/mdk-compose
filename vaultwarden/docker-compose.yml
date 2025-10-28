@@ -1,3 +1,10 @@
+networks:
+  server-net:
+    external: true
+
+volumes:
+  vault_data:
+
 services:
   vaultwarden:
     image: vaultwarden/server:latest
@@ -5,7 +12,7 @@ services:
     volumes:
       - vault_data:/data/
     ports:
-      - "80:80"
+      - "8022:80"
+    networks:
+      - server-net
 
-volumes:
-  vault_data:
