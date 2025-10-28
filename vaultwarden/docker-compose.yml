@@ -9,6 +9,8 @@ services:
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
+    environment:
+      SIGNUPS_ALLOWED: "true"
     volumes:
       - vault_data:/data/
     ports:
