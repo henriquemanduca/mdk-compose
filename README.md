@@ -4,44 +4,82 @@ Este repositório contém uma coleção de configurações Docker Compose, cada 
 
 ## Serviços Disponíveis
 
-### Planka
+### AdGuard Home
+**Diretório:** `adguard`
+Uma solução de bloqueio de anúncios e rastreadores em toda a rede, que atua como um servidor DNS. Protege sua privacidade e controla o tráfego da rede.
 
-*   **Descrição**: Planka é uma plataforma de gerenciamento de projetos de código aberto, inspirada no Trello. Ele oferece quadros Kanban para organizar tarefas, colaborar em projetos e acompanhar o progresso.
-*   **Tecnologias**: Node.js, PostgreSQL (como backend de banco de dados).
-*   **Porta Exposta**: `3000` (mapeada para a porta `1337` do contêiner).
-*   **Dependências**: Requer um serviço PostgreSQL para armazenamento de dados.
+### Audiobookshelf
+**Diretório:** `audiobookshelf`
+Um servidor de audiolivros e podcasts auto-hospedado. Permite organizar e transmitir sua coleção de mídia de áudio.
 
-### PostgreSQL
+### BookStack
+**Diretório:** `bookstack`
+Uma plataforma simples e gratuita para organizar e armazenar informações. Ideal para documentação e wikis pessoais ou empresariais.
 
-*   **Descrição**: Um poderoso sistema de gerenciamento de banco de dados relacional de código aberto. É conhecido por sua robustez, confiabilidade e desempenho.
-*   **Tecnologias**: PostgreSQL.
-*   **Porta Exposta**: `5432`.
-*   **Variáveis de Ambiente**: `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB` (definidas via arquivo `.env.sample`).
+### Cloudflare Tunnel
+**Diretório:** `cloudflare-tunnel`
+Permite expor serviços locais para a internet de forma segura através da rede da Cloudflare, sem a necessidade de abrir portas no firewall.
 
-### Redis
+### Immich
+**Diretório:** `immich`
+Uma solução de backup de fotos e vídeos de alto desempenho e auto-hospedada, inspirada no Google Photos. Inclui recursos de aprendizado de máquina para reconhecimento facial e de objetos.
 
-*   **Descrição**: Um armazenamento de estrutura de dados em memória de código aberto, usado como banco de dados, cache e intermediário de mensagens. Oferece alta performance e flexibilidade.
-*   **Tecnologias**: Redis.
-*   **Porta Exposta**: `6379`.
-*   **Variáveis de Ambiente**: `REDIS_PASSWORD` (definida via arquivo `.env.sample`).
+### Kavita
+**Diretório:** `kavita`
+Um servidor de biblioteca digital rápido e leve, focado em mangás, quadrinhos e livros.
 
-### RedisInsight
-
-*   **Descrição**: RedisInsight é uma ferramenta gráfica de código aberto para visualizar, analisar e otimizar dados Redis. Ele fornece uma interface de usuário intuitiva para interagir com suas instâncias Redis.
-*   **Tecnologias**: RedisInsight.
-*   **Porta Exposta**: `5540`.
-*   **Dependências**: Requer um serviço Redis em execução para se conectar.
+### Memos
+**Diretório:** `memos`
+Um serviço de anotações leve e focado na privacidade, que permite capturar pensamentos e ideias facilmente.
 
 ### MySQL
+**Diretório:** `mysql`
+Um sistema de gerenciamento de banco de dados relacional amplamente utilizado.
 
-*   **Descrição**: Um sistema de gerenciamento de banco de dados relacional de código aberto amplamente utilizado. É conhecido por sua velocidade, confiabilidade e facilidade de uso.
-*   **Tecnologias**: MySQL.
-*   **Porta Exposta**: `3306`.
-*   **Variáveis de Ambiente**: `MYSQL_ROOT_PASSWORD`, `MYSQL_DATABASE`.
+### Nextcloud
+**Diretório:** `nextcloud`
+Uma suíte de software cliente-servidor para criação e uso de serviços de hospedagem de arquivos. Oferece funcionalidades semelhantes ao Dropbox ou Google Drive.
+
+### Planka
+**Diretório:** `planka`
+Uma ferramenta de gerenciamento de projetos em tempo real com quadros Kanban, permitindo organizar tarefas e fluxos de trabalho.
+
+### Plex
+**Diretório:** `plex`
+Um servidor de mídia que organiza seus vídeos, músicas e fotos pessoais e os transmite para seus dispositivos.
+
+### Portainer
+**Diretório:** `portainer`
+Uma interface de gerenciamento leve para ambientes Docker, facilitando o gerenciamento de contêineres, imagens e redes.
+
+### PostgreSQL
+**Diretório:** `postgres`
+Um poderoso sistema de banco de dados relacional de código aberto, conhecido por sua confiabilidade e robustez.
+
+### qBittorrent
+**Diretório:** `qbittorrent`
+Um cliente BitTorrent de código aberto, leve e rico em recursos.
+
+### Redis
+**Diretório:** `redis`
+Um armazenamento de estrutura de dados em memória, usado como banco de dados, cache e message broker.
+
+### RedisInsight
+**Diretório:** `redisinside`
+Uma interface gráfica (GUI) para visualizar e gerenciar dados no Redis.
 
 ### Samba
+**Diretório:** `samba`
+Serviço para compartilhamento de arquivos e impressoras em rede, permitindo integração entre sistemas Windows e Unix/Linux.
 
-*   **Descrição**: Samba é uma implementação de software livre do protocolo de rede SMB/CIFS, que permite o compartilhamento de arquivos e impressoras entre sistemas operacionais.
-*   **Tecnologias**: Samba.
-*   **Portas Expostas**: `137/udp`, `138/udp`, `139/tcp`, `445/tcp`.
-*   **Configuração**: Compartilha o diretório `/home/henrique/shared` do host como `/shared` no contêiner, com usuário `henrique` e senha `manduca`.
+### Vaultwarden
+**Diretório:** `vaultwarden`
+Uma implementação alternativa do servidor Bitwarden escrita em Rust, ideal para auto-hospedagem de gerenciamento de senhas.
+
+### Windmill
+**Diretório:** `windmill`
+Uma plataforma de desenvolvedor para construir ferramentas internas, fluxos de trabalho e APIs rapidamente, transformando scripts em UIs.
+
+### Yacht
+**Diretório:** `yacht`
+Uma interface web para gerenciamento de contêineres Docker, com foco na simplicidade e facilidade de uso.
