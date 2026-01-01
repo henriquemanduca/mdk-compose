@@ -7,3 +7,9 @@ services:
     volumes:
       - ./stirling-data:/configs
     restart: unless-stopped
+    networks:
+      - server-net
+
+networks:
+  server-net:
+    external: true
