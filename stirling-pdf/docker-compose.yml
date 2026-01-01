@@ -3,7 +3,7 @@ services:
     image: stirlingtools/stirling-pdf:latest
     container_name: stirling-pdf
     ports:
-      - "8001:8000"
+      - "8002:8080"
     volumes:
       - ./stirling-data:/configs
     restart: unless-stopped
